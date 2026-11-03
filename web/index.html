@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wormsoft Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Wormsoft Chat</h1>
+    <p class="sub">Модель: <code>wormsoft/agent/low</code></p>
+
+    <label>
+      API key
+      <input id="apiKey" type="password" autocomplete="off" placeholder="Вставьте ключ" />
+    </label>
+
+    <label>
+      Сообщение
+      <textarea id="prompt" rows="4" placeholder="Что такое Python?"></textarea>
+    </label>
+
+    <button id="send" type="button">Отправить</button>
+
+    <section id="out" hidden>
+      <h2>Ответ</h2>
+      <pre id="answer"></pre>
+    </section>
+
+    <p id="error" class="error" hidden></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
