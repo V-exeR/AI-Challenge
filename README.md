@@ -12,5 +12,3 @@ AI Challenge/
 ```
 
 Провайдер: [ai.wormsoft.ru](https://ai.wormsoft.ru), модель по умолчанию `wormsoft/agent/low`.
-
-Ключ API не коммитится: в каждой папке `app/` создайте `.env` из `.env.example`.
