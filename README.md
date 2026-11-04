@@ -7,6 +7,7 @@
 AI Challenge/
 ├── Day 01/app/   # минимальный запрос к LLM (CLI + web :8000)
 ├── Day 02/app/   # контроль формата ответа (web :8001 + CLI)
+├── Day 03/app/   # промптинг × reasoning (web :8003 + CLI)
 ├── .gitignore
 └── README.md
 ```
