@@ -1,4 +1,4 @@
-# Lesson 02 — контроль формата ответа
+# Day 02 — контроль формата ответа
 
 Один и тот же запрос к LLM с разным уровнем контроля:
 
@@ -21,7 +21,7 @@
 ## Запуск
 
 ```powershell
-cd "Lesson 02/app"
+cd "Day 02/app"
 copy .env.example .env   # вписать WORMSOFT_API_KEY
 python experiment_control.py
 ```

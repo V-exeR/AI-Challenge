@@ -1,4 +1,4 @@
-# Lesson 01 — минимальный запрос к LLM
+# Day 01 — минимальный запрос к LLM
 
 Отправка одного запроса в LLM через API, получение ответа и вывод в CLI или простой web-интерфейс.
 
@@ -13,14 +13,14 @@
 ## Запуск CLI
 
 ```powershell
-cd "Lesson 01/app"
+cd "Day 01/app"
 python llm_chat.py Что такое Python?
 ```
 
 ## Запуск web
 
 ```powershell
-cd "Lesson 01/app"
+cd "Day 01/app"
 python server.py
 ```
 

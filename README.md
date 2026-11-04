@@ -1,13 +1,16 @@
 # AI Challenge
 
-Репозиторий заданий AI Advent Challenge #10
+Репозиторий заданий AI Advent Challenge #10.
+Каждый день — отдельная папка `Day NN` с решением и кратким README.
 
 ```
 AI Challenge/
-├── Lesson 01/app/   # минимальный запрос к LLM (CLI + web)
-├── Lesson 02/app/   # контроль формата ответа (max_tokens, stop, schema)
+├── Day 01/app/   # минимальный запрос к LLM (CLI + web)
+├── Day 02/app/   # контроль формата ответа (max_tokens, stop, schema)
 ├── .gitignore
 └── README.md
 ```
 
 Провайдер: [ai.wormsoft.ru](https://ai.wormsoft.ru), модель по умолчанию `wormsoft/agent/low`.
+
+Ключ API не коммитится: в каждой папке `app/` создайте `.env` из `.env.example`.
