@@ -5,8 +5,8 @@
 
 ```
 AI Challenge/
-├── Day 01/app/   # минимальный запрос к LLM (CLI + web)
-├── Day 02/app/   # контроль формата ответа (max_tokens, stop, schema)
+├── Day 01/app/   # минимальный запрос к LLM (CLI + web :8000)
+├── Day 02/app/   # контроль формата ответа (web :8001 + CLI)
 ├── .gitignore
 └── README.md
 ```

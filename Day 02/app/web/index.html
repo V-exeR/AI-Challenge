@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day 02 — контроль ответа</title>
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <link rel="stylesheet" href="style.css?v=2" />
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Day 02</p>
+    <h1>Контроль формата ответа</h1>
+    <p class="sub">
+      Один запрос — разные ограничения:
+      формат в промпте, <code>max_tokens</code>, stop, JSON Schema.
+      Модель: <code id="modelLabel">…</code>
+    </p>
+
+    <label>
+      API key
+      <input id="apiKey" type="password" autocomplete="off" placeholder="Вставьте ключ" />
+    </label>
+
+    <label>
+      Запрос (один и тот же для всех вариантов контроля)
+      <textarea id="prompt" rows="5" placeholder="Текст запроса к модели">Опиши язык программирования Python: что это, для чего используют, и назови ровно три ключевые особенности.</textarea>
+    </label>
+
+    <label>
+      Прогонов на вариант
+      <select id="runs">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+      </select>
+    </label>
+
+    <button id="run" type="button">Запустить эксперимент</button>
+    <p id="status" class="status" hidden></p>
+    <p id="error" class="error" hidden></p>
+
+    <section id="usedPromptBox" class="panel" hidden>
+      <h2>Фактически отправленный базовый запрос</h2>
+      <pre id="usedPrompt"></pre>
+    </section>
+
+    <section id="compareBox" class="panel" hidden>
+      <h2>Сравнение</h2>
+      <div class="table-wrap">
+        <table id="compareTable">
+          <thead>
+            <tr>
+              <th>Вариант</th>
+              <th>API</th>
+              <th>Длина</th>
+              <th>JSON</th>
+              <th>Схема</th>
+              <th>Что ломается</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="detailsBox" class="panel" hidden>
+      <h2>Детали прогонов</h2>
+      <div id="details"></div>
+    </section>
+
+    <section id="conclBox" class="panel" hidden>
+      <h2>Выводы</h2>
+      <ul id="conclusions"></ul>
+    </section>
+  </main>
+  <script src="app.js?v=2"></script>
+</body>
+</html>
