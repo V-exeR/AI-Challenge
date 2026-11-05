@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <title>Day 04 — температура</title>
+  <link rel="stylesheet" href="style.css?v=1" />
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Day 04</p>
+    <h1>Температура</h1>
+    <p class="sub">
+      temp = 0 / 0.7 / 1.2 × задача с эталоном × генерация, по 5 прогонов.
+      Модель: <code id="modelLabel">…</code>, reasoning: <code>none</code>
+    </p>
+
+    <label>
+      API key
+      <input id="apiKey" type="password" autocomplete="off" placeholder="Вставьте ключ" />
+    </label>
+
+    <label>
+      Модель
+      <select id="model"></select>
+    </label>
+    <p class="hint">
+      У <code>wormsoft/agent/low</code> бывает роут на qwen: весь бюджет уходит в скрытое
+      reasoning, <code>content</code> пустой. Для сравнения temperature надёжнее
+      <code>google/gemma4:31b</code>.
+    </p>
+
+    <button id="run" type="button">Запустить эксперимент</button>
+    <p id="status" class="status" hidden></p>
+    <p id="error" class="error" hidden></p>
+
+    <section id="tasksBox" class="panel" hidden>
+      <h2>Задачи</h2>
+      <ol id="tasksList"></ol>
+    </section>
+
+    <section id="summaryBox" class="panel" hidden>
+      <h2>Таблица: задача × temperature</h2>
+      <div class="table-wrap">
+        <table id="summaryTable">
+          <thead>
+            <tr>
+              <th>Задача</th>
+              <th>temp</th>
+              <th>Верных</th>
+              <th>Формат↓</th>
+              <th>Уникальных</th>
+              <th>Jaccard</th>
+              <th>Токены</th>
+              <th>Время</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="conclBox" class="panel" hidden>
+      <h2>Выводы</h2>
+      <ul id="conclusions"></ul>
+    </section>
+
+    <section id="detailsBox" class="panel" hidden>
+      <h2>Прогоны</h2>
+      <div id="details"></div>
+    </section>
+  </main>
+  <script src="app.js?v=3"></script>
+</body>
+</html>
