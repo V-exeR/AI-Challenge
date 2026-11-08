@@ -9,6 +9,7 @@ AI Challenge/
 ├── Day 02/app/   # контроль формата ответа (web :8001 + CLI)
 ├── Day 03/app/   # промптинг × reasoning (web :8003 + CLI)
 ├── Day 04/app/   # temperature 0 / 0.7 / 1.2 (web :8004 + CLI)
+├── Day 05/app/   # small / medium / flagship models (web :8005 + CLI)
 ├── .gitignore
 └── README.md
 ```

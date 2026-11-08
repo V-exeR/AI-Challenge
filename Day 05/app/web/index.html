@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <title>Day 05 — версии моделей</title>
+  <link rel="stylesheet" href="style.css?v=1" />
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Day 05</p>
+    <h1>Версии моделей</h1>
+    <p class="sub">
+      Одни и те же 6 задач на small / medium / flagship.
+      temperature=<code>0</code>, reasoning=<code>none</code>, 1 прогон.
+    </p>
+
+    <label>
+      API key
+      <input id="apiKey" type="password" autocomplete="off" placeholder="Вставьте ключ" />
+    </label>
+
+    <section id="tiersBox" class="panel">
+      <h2>Тиры (с fallback)</h2>
+      <ul id="tiersList"></ul>
+    </section>
+
+    <button id="run" type="button">Запустить сравнение</button>
+    <p id="status" class="status" hidden></p>
+    <p id="error" class="error" hidden></p>
+
+    <section id="tasksBox" class="panel" hidden>
+      <h2>Задачи</h2>
+      <ol id="tasksList"></ol>
+    </section>
+
+    <section id="summaryBox" class="panel" hidden>
+      <h2>Таблица: модель → метрики</h2>
+      <div class="table-wrap">
+        <table id="summaryTable">
+          <thead>
+            <tr>
+              <th>Тир</th>
+              <th>Модель</th>
+              <th>Верных</th>
+              <th>Время, с</th>
+              <th>Токены</th>
+              <th>Стоимость*</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="hint" id="pricingNote"></p>
+    </section>
+
+    <section id="conclBox" class="panel" hidden>
+      <h2>Выводы</h2>
+      <ul id="conclusions"></ul>
+    </section>
+
+    <section id="detailsBox" class="panel" hidden>
+      <h2>Детали по задачам</h2>
+      <div id="details"></div>
+    </section>
+  </main>
+  <script src="app.js?v=1"></script>
+</body>
+</html>
